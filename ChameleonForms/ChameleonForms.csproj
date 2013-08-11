@@ -35,6 +35,9 @@
     <DocumentationFile>bin\Release\ChameleonForms.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="container">
+      <HintPath>..\packages\container.1.1.1\lib\net40\container.dll</HintPath>
+    </Reference>
     <Reference Include="Humanizer">
       <HintPath>..\packages\Humanizer.0.2\lib\NET40\Humanizer.dll</HintPath>
     </Reference>
@@ -85,6 +88,7 @@
     <Compile Include="Component\Field.cs" />
     <Compile Include="Component\FormComponent.cs" />
     <Compile Include="Component\Message.cs" />
+    <Compile Include="Config.cs" />
     <Compile Include="Enums\DisplayType.cs" />
     <Compile Include="Enums\MessageType.cs" />
     <Compile Include="Component\Section.cs" />
