@@ -80,7 +80,8 @@ namespace ChameleonForms.Component
         /// <returns>The message</returns>
         public static Message<TModel, TTemplate> BeginMessage<TModel, TTemplate>(this IForm<TModel, TTemplate> form, MessageType messageType, string heading) where TTemplate : IFormTemplate
         {
-            return new Message<TModel, TTemplate>(form, messageType, new HtmlString(HttpUtility.HtmlEncode(heading)));
+            return new Message<TModel, TTemplate>(form, messageType,
+                string.IsNullOrWhiteSpace(heading) ? null : new HtmlString(HttpUtility.HtmlEncode(heading)));
         }
     }
 }
